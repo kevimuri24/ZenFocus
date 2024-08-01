@@ -12,6 +12,18 @@ body {
   overflow: hidden; /* Prevents overflow */
 }
 
+#date{
+  font-size: large;
+  font-weight: bold;
+}
+
+#quote {
+  font-family: 'Times New Roman';
+  font-size: large;
+  font-weight:  bold;
+  flex-wrap: wrap;
+}
+
 /* Custom button styles */
 .button-1 {
   background: #5E5DF0;
@@ -34,6 +46,12 @@ body {
   word-break: break-word;
   border: 0;
 }
+
+#timer{
+ font-size: 15dvh;
+ font-weight:bolder;
+}
+
 
 /* Dark mode styles */
 .dark-mode {
@@ -197,3 +215,5 @@ body {
 #bottom .music-button:checked i {
   color: rgba(0, 0, 0, 0.8);
 }
+
+
