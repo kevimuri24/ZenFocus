@@ -18,9 +18,9 @@
     <div id="mid" class="d-flex justify-content-center" style="padding: 50px">
         <div id="mid-buttons" >
             <div class="d-flex justify-content-between">
-                <button class="button-1" >Zen</button>
-                <button class="button-1">Short</button>
-                <button class="button-1">Long</button>
+                <button class="button-1 mode" data-time="1500">Zen</button>
+                <button class="button-1 mode" data-time="300">Short Break</button>
+                <button class="button-1 mode" data-time="900">Long Break</button>
             </div>
             <div class="d-flex" style="padding: 50px;">
                 <p id="timer">
@@ -34,11 +34,12 @@
                 <button id="stop" class="button-1">Stop</button>
                 <button id="reset" class="button-1">reset</button>
             </div>
+            <audio id="alarm-sound" src="alarm.mp3"></audio>
         </div>
     </div>
     
     <div class="d-flex justify-content-center">
-        <div id="quote"></div>
+        <div id="quote" style="margin: auto; padding: 10px;"></div>
     </div>
     <div id="bottom" class="d-flex flex-row mb-2 margin-bottom">
         <button class="music-button">
