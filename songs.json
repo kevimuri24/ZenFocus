@@ -1,0 +1,33 @@
+[
+    {
+      "src":"src/music/lofi-study-112191.mp3",
+      "title": "Lofi Studies'",
+      "artist": "FassSounds",
+      "coverart": "images/thumbnails-01.svg"
+    },
+    {
+      "src": "src/music/lofi-vibes-113884.mp3",
+      "title": "lofi Vibes",
+      "artist": "Chillmore",
+      "coverart": "images/thumbnails-02.svg"
+    },
+    {
+      "src": "src/music/for-a-dream-lofi-vibes-216038.mp3",
+      "title": "For a Dream",
+      "artist": "Xethrocc",
+      "coverart": "images/thumbnails-03.svg"
+    },
+    {
+      "src": "src/music/good-night-160166.mp3",
+      "title": "Goodnight",
+      "artist": "FassSounds",
+      "coverart": "images/thumbnails-04.svg"
+    },
+    {
+      "src": "src/music/coverless-book-lofi-186307.mp3",
+      "title": "Coverless Book",
+      "artist": "AmbientAudioVision",
+      "coverart": "images/thumbnails-05.svg"
+    }
+  ]
+  

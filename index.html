@@ -6,17 +6,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="src/styles.css">
-
     <title>Document</title>
 </head>
 <body>
-        <div id="top" class="d-flex justify-content-between margin-top" style="padding: 30px;">
-            <div id="date">Date</div>
-        </div>
-    
-   
+    <div id="top" class="d-flex justify-content-between margin-top" style="padding: 30px;">
+        <div id="date">Date</div>
+    </div>
+
     <div id="mid" class="d-flex justify-content-center" style="padding: 50px">
-        <div id="mid-buttons" >
+        <div id="mid-buttons">
             <div class="d-flex justify-content-between">
                 <button class="button-1 mode" data-time="1500">Zen</button>
                 <button class="button-1 mode" data-time="300">Short Break</button>
@@ -32,31 +30,66 @@
             <div class="d-flex justify-content-between" style="padding: 50px">
                 <button id="start" class="button-1">Start</button>
                 <button id="stop" class="button-1">Stop</button>
-                <button id="reset" class="button-1">reset</button>
+                <button id="reset" class="button-1">Reset</button>
             </div>
-            <audio id="alarm-sound" src="alarm.mp3"></audio>
+            <audio id="alarm-sound" src="src/sound.mp3"></audio>
         </div>
     </div>
-    
     <div class="d-flex justify-content-center">
-        <div id="quote" style="margin: auto; padding: 10px;"></div>
+        <div id="quote" class="text-center"></div>
     </div>
+
+    <div id="music-popup" class="white-popup mfp-hide">
+        <button id="close-music-popup" class="close-button">X</button>
+        <audio src="" id="hidden-player" autoplay></audio>
+        <div id="player">
+            <img src="" class="coverr" alt="" height="100" width="100" />
+            <div class="player-song">
+                <div class="title"></div>
+                <div class="artist"></div>
+                <progress value="0" max="1"></progress>
+                <div class="timestamps">
+                    <div class="time-now">0:00:00</div>
+                    <div class="time-finish">0:00:00</div>
+                </div>
+                <div class="actions">
+                    <div class="prev">
+                        <i class="material-icons">Prev</i>
+                    </div>
+                    <div class="play">
+                        <a class="play-button paused" href="#">
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <div class="triangle-1"></div>
+                            <div class="triangle-2"></div>
+                        </a>
+                    </div>
+                    <div class="next">
+                        <i class="material-icons">Next</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="bottom" class="d-flex flex-row mb-2 margin-bottom">
         <button class="music-button">
             <i class="fas fa-music"></i>
         </button>
         <div id="controls">
-                <div class="toggle">
-                  <input type="checkbox">
-                  <span class="button"></span>
-                  <span class="label">☼</span>
-                </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span class="button"></span>
+                <span class="label">☼</span>
+            </div>
         </div>
     </div>
-    
-    <script src="js/index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

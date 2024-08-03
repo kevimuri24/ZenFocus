@@ -12,16 +12,19 @@ body {
   overflow: hidden; /* Prevents overflow */
 }
 
-#date{
+#date {
   font-size: large;
   font-weight: bold;
 }
 
 #quote {
-  font-family: 'Times New Roman';
-  font-size: large;
-  font-weight:  bold;
-  flex-wrap: wrap;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
 }
 
 /* Custom button styles */
@@ -47,11 +50,10 @@ body {
   border: 0;
 }
 
-#timer{
- font-size: 15dvh;
- font-weight:bolder;
+#timer {
+  font-size: 15dvh;
+  font-weight: bolder;
 }
-
 
 /* Dark mode styles */
 .dark-mode {
@@ -146,6 +148,195 @@ body {
   bottom: 10px;
 }
 
+/* Styling for the music app */
+.white-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+}
+
+.white-popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#player {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 1em;
+}
+
+#player img {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  border-radius: 10px;
+}
+
+#player .player-song {
+  width: 100%;
+  max-width: 370px;
+  height: 100%;
+  margin-left: 130px;
+}
+
+#player .player-song .title {
+  color: #333;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#player .player-song .artist {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#player .player-song .timestamps {
+  width: calc(100% - 15px);
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#player .player-song .actions {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#player .player-song .actions .next, 
+#player .player-song .actions .prev {
+  cursor: pointer;
+}
+
+#player .player-song .actions i {
+  font-size: 32px;
+  transform: translateY(2px);
+  color: #bbbbbb;
+  transition: .1s;
+}
+
+#player .player-song .actions i:hover {
+  color: #888888;
+  transition: .1s;
+}
+
+progress[value] {
+  appearance: none;
+  width: calc(100% - 15px);
+  height: 6px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 50px;
+}
+
+progress[value]::-webkit-progress-value {
+  border-radius: 50px;
+  background-color: #333DDD;
+}
+
+.play-button {
+  height: 16px;
+  width: 16px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin: 0 10px;
+}
+
+.play-button:hover .left, .play-button:hover .right {
+  background-color: #888888;
+}
+
+.left {
+  height: 100%;
+  float: left;
+  background-color: #bbbbbb;
+  width: 36%;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.triangle-1 {
+  transform: translate(0, -100%);
+}
+
+.triangle-2 {
+  transform: translate(0, 100%);
+}
+
+.triangle-1,
+.triangle-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  width: 0;
+  height: 0;
+  border-right: 16px solid #fff;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  transition: transform 0.25s ease;
+}
+
+.right {
+  height: 100%;
+  float: right;
+  width: 36%;
+  background-color: #bbbbbb;
+  transition: all 0.25s ease;
+}
+
+.paused .left {
+  width: 50%;
+}
+
+.paused .right {
+  width: 50%;
+}
+
+.paused .triangle-1 {
+  transform: translate(0, -50%);
+}
+
+.paused .triangle-2 {
+  transform: translate(0, 50%);
+}
+
+.centered-big {
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  font-size: 30px;
+}
+
 /* Positioning the music button at the bottom left */
 #bottom .music-button {
   position: absolute;
@@ -216,4 +407,16 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 
-
+/* Close button styles */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
