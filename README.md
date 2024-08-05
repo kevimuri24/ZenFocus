@@ -37,8 +37,7 @@ ZenFocus is designed to help anyone who wants to work effectively using bursts o
 ## API Data and Usage
 
 ### Music API
-- Integration with the Spotify API allows users to play ambient music, white noise, or their favorite tracks during focus sessions.
-- Users can search for songs, artists, or playlists directly within the app.
+- As most websites require strict security and access or subscriptions, I opted to integrate royalty free lofi music via a json library instead.
 
 ### Quote API
 - Motivational quotes and affirmations are sourced from a public quote API.
